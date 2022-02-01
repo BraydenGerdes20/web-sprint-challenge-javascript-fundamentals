@@ -26,11 +26,15 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(number){
-  for(let i = 0; i < number; i++){
+function summation(num){
+  let count = 0;
+  for( let i = 1; i <= num; i++){
+    count +=i;
   }
+  return count;
 }
-// i am really lost here i have tried several different ways but its still am not getting the correct answer
+console.log(summation(4))
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -59,9 +63,10 @@ const zooAnimals = [
     zooAnimals.forEach(item  => {
       newArray.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
     });
+    return newArray;
   }
 
-  // confused on why this isn't returning anything
+
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -127,14 +132,14 @@ function add(num1, num2){
   
 function multiply(num1, num2){
    return num1 * num2;
-  }
+}
 
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(first, last){
    return `Hello ${first} ${last}, nice to meet you!`
-  }
+}
   
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
